@@ -14,7 +14,7 @@ typedef struct
 List *Create()
 {
 	List *p;
-	p=(List *)malloc(sizeof(List));
+ 	p=(List *)malloc(sizeof(List));
 	p->last=-1;
 	return p;
 }
