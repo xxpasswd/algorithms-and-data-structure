@@ -80,3 +80,77 @@ void LevelTravel(Tree *p)
 		if(temp->right) push(temp->right,q);
 	}
 }
+
+
+//二叉搜索树
+Tree *Find(ElementType x,Tree *temp)
+{
+	if(!temp) return NULL;
+	if(x<temp->data) return Find(x,temp->left);
+	else if(x>temp->data) return Find(x,temp_right);
+	else return temp;
+}
+
+Tree *Find2(ElementType x,Tree *temp)
+{
+	while(!temp)
+	{
+		if(x<temp->data) temp=temp->left;
+		else if(x>temp->data) temp=temp->right;
+		else return temp;
+	}
+	return NULL;
+}
+
+Tree *FindMin(Tree *temp)
+{
+	if(!temp) return NULL;
+	if(!temp->left) return temp;
+	else FindMin(temp->left);
+}
+
+Tree *FindMax(Tree *temp)
+{
+	if(!temp) return NULL;
+	while(temp->right)
+		temp=temp->right;
+	return temp;
+}
+
+void Insert(ElementType x,Tree *p)
+{
+	if(!p)
+	{
+		Tree *temp;
+		temp=(Tree *)malloc(sizeof(Tree));
+		temp->data=x;
+		temp->left=NULL;
+		temp->right=NULL;
+		return temp;
+	}
+	else if(x<p->data) p->left=Insert(x,p->left);
+	else if(x>p->data) p->right=Insert(x,p->right);
+}
+
+void Delete(ElementType x,Tree *p)
+{
+	Tree *temp,*temp2;
+	if(!p) printf("location wrong\n");
+	else if(x<p->data) p->left=Delete(x,p->left);
+	else if(x>p->data) p->left=Delete(x,p->right);
+	else
+	{
+		if(p->left&&p->right){
+			temp = Findmin(p->right);
+			p->data = temp->data;
+			p->right=Delete(p->data,p->right);
+		}
+		else
+		{	
+			temp = p;
+			if(!p->left) p = p->right;
+			else if(!p->right) p=p->left;
+			free(temp);
+		}
+	}
+}
