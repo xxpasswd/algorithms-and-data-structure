@@ -13,6 +13,7 @@ def plus_one(num):
             return num
         else:
             num[i] = 0
+    # 执行完还没有返回，说明最后一位加1之后进位了
     num.insert(0,1)
     return num
 
