@@ -9,7 +9,7 @@ def summary_ranges(nums):
     # 范围结束右端点，初始化为数组第一个数
     last = nums[0]
     # 输出结果
-    out = []
+    out_list = []
 
     for i in nums[1:]:
         # 当数字连续时，更新右端点
@@ -17,13 +17,13 @@ def summary_ranges(nums):
             last = i
         # 当连续出现断裂时，更新开始节点
         else:
-            out.append(get_range(start,last))
+            out_list.append(get_range(start,last))
             start = i
             last = i
     else:
-        out.append(get_range(start,last))
+        out_list.append(get_range(start,last))
     
-    return out
+    return out_list
 
 def get_range(start,last):
     if start == last:
