@@ -1,8 +1,8 @@
-# python列表
+# python列表
 
 |操作             |大O效率    |
 | ---------------- | ---------- |
-| index []        | O(1)       |
+|index []        | O(1)       |
 | index assignment | O(1)       |
 | append()         | O(1)       |
 | pop()            | O(1)       |
