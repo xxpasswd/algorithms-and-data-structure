@@ -1,6 +1,11 @@
 '''
 python 队列实现
 
+is_empty():O(1)
+enqueue():O(n)
+dequeue():O(1)
+size():O(1)
+
 '''
 
 class Queue(object):
