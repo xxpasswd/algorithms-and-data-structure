@@ -1,6 +1,10 @@
 # python列表
 
+<<<<<<< HEAD
 |操作             |大O效率    |
+=======
+| 操作            | 大O效率    |
+>>>>>>> b4d5bad0adafabc56060b21fd6498bdfbcd144e0
 | ---------------- | ---------- |
 | index []        | O(1)       |
 | index assignment | O(1)       |
