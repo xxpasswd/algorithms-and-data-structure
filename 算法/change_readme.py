@@ -5,7 +5,7 @@
 
 import re
 
-pattern = r'(?<=#### )(\d+[ .]*(\w+)\w.*)'
+pattern = r'(?<=#### )(\d+[ .]*(\w+).*)'
 
 with open('README.md','r') as f:
     f2 = open('README2.md','w')
