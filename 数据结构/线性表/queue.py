@@ -2,28 +2,27 @@
 python 队列实现
 
 is_empty():O(1)
-enqueue():O(n)
-dequeue():O(1)
+enqueue(item):O(n)
+dequeue(item):O(1)
 size():O(1)
-
 '''
 
-class Queue(object):
+class Queue:
     def __init__(self):
-        self._items = []
+        self.items = []
 
     
     def is_empty(self):
-        return self._items == []
+        return self.items == []
 
     
     def enqueue(self,item):
-        self._items.insert(0,item)
+        self.items.insert(0,item)
 
     
     def dequeue(self):
-        return self._items.pop()
+        return self.items.pop()
 
     
     def size(self):
-        return len(self._items)
+        return len(self.items)
