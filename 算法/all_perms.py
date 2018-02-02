@@ -14,10 +14,6 @@
 
 '''
 
-# 正向递归
-def inner_all_perms(elements):
-    out = 
-    # 当开始索引等于结束索引时，说明是最后一个元素了
 
 # 反向递归
 def all_perms(elements:str)->"单个元素时str，多个元素时list":
