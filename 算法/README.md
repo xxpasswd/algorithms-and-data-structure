@@ -1,24 +1,47 @@
-[#### 1. hanoi.py：汉诺塔问题](./hanoi.py)
-#### 2. find_single：发现落单的数
+#### [1. hanoi.py：汉诺塔问题](./hanoi.py)
+
+#### [2. find_single：发现落单的数](./find_single.py)
+
 给出2N+1个数，其中只有一个数字是单个，其他都为双数，找出这个单数
-#### 3. search_num：数字组合
+
+#### [3. search_num：数字组合](./search_nu.py)
+
 给出候选字集合C和目标数字T，写一个函数找出C中所有的组合，使找出的数字和为T，C中的数字可以无限制重复选取
-#### 4. factorial:数n的阶乘，后面有几个零
-#### 5. parity_group:数组重新排列，使得奇数在前，偶数在后
-#### 6. smallest_difference:最小差
+
+#### [4. factorial:数n的阶乘，后面有几个零](./factoria.py)
+
+#### [5. parity_group:数组重新排列，使得奇数在前，偶数在后](./parity_grou.py)
+
+#### [6. smallest_difference:最小差](./smallest_differenc.py)
+
 给出两个数组，从两个数组中各取一个元素，两者差值越小越好
-#### 7. circular_pop:报数问题
+
+#### [7. circular_pop:报数问题](./circular_po.py)
+
 有n个人围成一圈，顺序排号，从第一个人开始报数（从1到3报数），凡报到3的人退出圈子
-#### 8. flatten:数组扁平化
-#### 9. garage:车库问题
+
+#### [8. flatten:数组扁平化](./flatte.py)
+
+#### [9. garage:车库问题](./garag.py)
+
 只有一个空车位，通过空车位，调整车库里的每辆车的位置到特定位置
-#### 10. longest_no_repeat:最长不重复子串
-#### 11. merge_interval:合并重复的间隔
-#### 12. missing_range:找出不在数组里的范围
-#### 13. plus_one:求数组加一后的值
-#### 14. rotate_array:数组旋转k步
-#### 15. summary_ranges:数组范围概括
-#### 16. three_sum:数组中选出三个数，使三个数加起来和为0
-#### 17. two_sum:在数组中找出两个数，使两个数加起来为特定值
-#### 18. all_perms：求字符的全排列
-#### 19. anagram:比较两个乱序字符串是否相同
+
+#### [10. longest_no_repeat:最长不重复子串](./longest_no_repea.py)
+
+#### [11. merge_interval:合并重复的间隔](./merge_interva.py)
+
+#### [12. missing_range:找出不在数组里的范围](./missing_rang.py)
+
+#### [13. plus_one:求数组加一后的值](./plus_on.py)
+
+#### [14. rotate_array:数组旋转k步](./rotate_arra.py)
+
+#### [15. summary_ranges:数组范围概括](./summary_range.py)
+
+#### [16. three_sum:数组中选出三个数，使三个数加起来和为0](./three_su.py)
+
+#### [17. two_sum:在数组中找出两个数，使两个数加起来为特定值](./two_su.py)
+
+#### [18. all_perms：求字符的全排列](./all_perm.py)
+
+#### [19. anagram:比较两个乱序字符串是否相同](./anagra.py)
