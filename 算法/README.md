@@ -22,3 +22,7 @@
 #### [17. two_sum:在数组中找出两个数，使两个数加起来为特定值](./two_sum.py)
 #### [18. all_perms：求字符的全排列](./all_perms.py)
 #### [19. anagram:比较两个乱序字符串是否相同](./anagram.py)
+#### [20. array_sum_combination:三个数求和](./array_sum_combination.py)
+三个数组中各取一个数，使它们加起来等于特定值
+#### [21. combination_sum:找出所有的组合](./combination_sum.py)
+数组中找出所有的组合加起来能够满足给定的值，数组中的数字可以重复利用

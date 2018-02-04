@@ -4,11 +4,15 @@
 '''
 
 import re
+import os
 
 pattern = r'(?<=#### )(\d+[ .]*(\w+).*)'
 
 with open('README.md','r') as f:
-    f2 = open('README2.md','w')
+    f2 = open('temp','w')
     for i in f:
         res = re.sub(pattern,r'[\1](./\2.py)',i)
-        f2.write(res+'\n')
+        f2.write(res)
+
+f2.close()
+os.rename('temp','README.md')
