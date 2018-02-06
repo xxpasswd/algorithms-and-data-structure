@@ -31,6 +31,6 @@ def dfs(target,candidates,index,path,res):
     else:
         for i in range(index,len(candidates)):
             # 此处path不能用append方法，append方法不会返回值，因此没有path的值会传递下去
-            dfs(target-candidates[i],candidates,i,path+[num[i]],res) 
+            dfs(target-candidates[i],candidates,i,path+[candidates[i]],res) 
 
 print(combination_sum([2,3,6,7],7))

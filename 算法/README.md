@@ -26,3 +26,7 @@
 三个数组中各取一个数，使它们加起来等于特定值
 #### [21. combination_sum:找出所有的组合](./combination_sum.py)
 数组中找出所有的组合加起来能够满足给定的值，数组中的数字可以重复利用
+#### [22. expression_add_operations:给数字加操作符](./expression_add_operations.py)
+给定一组数字，给数字中间插入+，-，*，使表达式的结果等于特定值
+#### [23. coin_problem:找零钱问题](./coin_problem.py)
+#### [24. base_switch:进制转换](./base_switch.py)
