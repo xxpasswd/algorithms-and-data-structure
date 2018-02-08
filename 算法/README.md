@@ -31,4 +31,5 @@
 #### [23. coin_problem:找零钱问题](./coin_problem.py)
 #### [24. base_switch:进制转换](./base_switch.py)
 #### [25. longest_subsequence:最长递增子序列](./longest_subsequence.py)
-#### [26. factor_combination:求一个已数所有肯能的因子组合](./factor_combination.py)
+#### [26. factor_combination:求一个数所有可能的因子组合](./factor_combination.py)
+#### [27. compress:压缩字符](./compress.py)
