@@ -30,3 +30,5 @@
 给定一组数字，给数字中间插入+，-，*，使表达式的结果等于特定值
 #### [23. coin_problem:找零钱问题](./coin_problem.py)
 #### [24. base_switch:进制转换](./base_switch.py)
+#### [25. longest_subsequence:最长递增子序列](./longest_subsequence.py)
+#### [26. factor_combination:求一个已数所有肯能的因子组合](./factor_combination.py)
