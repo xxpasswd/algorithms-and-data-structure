@@ -8,21 +8,18 @@ size():O(1)
 '''
 
 class Queue:
+
     def __init__(self):
-        self.items = []
+        self._queue = []
 
-    
     def is_empty(self):
-        return self.items == []
+        return self._queue == []
 
-    
-    def enqueue(self,item):
-        self.items.insert(0,item)
+    def enqueue(self, item):
+        self._queue.insert(0, item)
 
-    
     def dequeue(self):
-        return self.items.pop()
+        return self._queue.pop()
 
-    
     def size(self):
-        return len(self.items)
+        return len(self._queue)

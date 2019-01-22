@@ -114,4 +114,3 @@ def posix_eval(expression):
 
 # print(posix_eval('1 2 3 + *'))
 
-        
