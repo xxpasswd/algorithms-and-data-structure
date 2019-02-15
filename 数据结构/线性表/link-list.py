@@ -96,4 +96,59 @@ class LinkList:
             temp.set_next(current_node)
     
 
-                
+class Node2:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
+class LinkList2:
+    def __init__(self):
+        self.head = None
+
+    def add(self, data):
+        temp = Node2(data)
+        temp.next = self.head
+        self.head = temp
+
+    def pop(self):
+        if self.head is None:
+            return None
+        temp = self.head
+        self.head = temp.next
+        return temp.data
+
+    def search(self, data):
+        found = False
+        temp = self.head
+        while temp != None and not found:
+            if temp.data != data:
+                temp = temp.next
+                continue
+            else:
+                found = True
+        
+        return temp.data if found else None
+
+    def list(self):
+        temp = self.head
+        while temp != None:
+            print('{}--->'.format(temp.data), end='')
+            temp = temp.next
+        print('None')
+
+    def remove(self, data):
+        pass            
+
+    def insert(self, pos, data):
+        pass
+
+    def size(self):
+        temp = self.head
+        size = 0
+        while temp != None:
+            size += 1
+        return size
+
+    def is_empyt(self):
+        return self.head is None
