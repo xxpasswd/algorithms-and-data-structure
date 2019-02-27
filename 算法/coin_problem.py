@@ -45,5 +45,5 @@ def find_solution(coin_value_list,change,cur,path,out):
         for i in [c for c in coin_value_list if c<= change-cur]:
             find_solution(coin_value_list,change,i+cur,path+','+str(i),out)
            
-rec_mc([1,5,10,25],63)
+rec_mc([1,5,10,25],42)
 print(m)
