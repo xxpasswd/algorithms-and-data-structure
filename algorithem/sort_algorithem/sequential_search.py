@@ -23,3 +23,18 @@ def order_sequential_search(alist, item):
             break
         i += 1
     return found
+
+
+def binary_search(alist, item):
+    start, end = 0, len(alist)-1
+    mid = (start + end) // 2
+    found = False
+    while start < end-1 and not found:
+        if item[mid] < item:
+            start = mid
+        elif item[mid] > item:
+            end = mid
+        else:
+            found = True
+        mid = (start + end) // 2
+    return found
