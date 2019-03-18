@@ -2,3 +2,5 @@
 #### [2. bubble_sort.py：冒泡排序](./bubble_sort.py)
 #### [3. select_sort.py：选择排序](./select_sort.py)
 #### [4. insert_sort.py：插入排序](./insert_sort.py)
+#### [5. shell_sort.py: shell排序](./shell_sort.py)
+#### [6. merge_sort.py: 归并排序](./merge_sort.py)
