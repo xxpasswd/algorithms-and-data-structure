@@ -5,3 +5,4 @@
 #### [5. recursion.py: 递归](./recursion.py)
 #### [6. recursion_visualizing.py: 递归可视化](./recursion_visualizing.py)
 #### [7. hash_map.py：一个简单的hash map](./hash_map.py)
+#### [8. list_tree.py：通过列表实现数结构](./list_tree.py)
