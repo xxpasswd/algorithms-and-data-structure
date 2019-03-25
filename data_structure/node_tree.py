@@ -55,9 +55,10 @@ class BinaryTree:
             self.right.display()
             m.setpos(p)
 
-t = BinaryTree('a')
-t.insert_left('b')
-t.insert_left('c')
-t.insert_right('d')
-t.display()       
-m_w.exitonclick()
+if __name__ == '__main__':
+    t = BinaryTree('a')
+    t.insert_left('b')
+    t.insert_left('c')
+    t.insert_right('d')
+    t.display()       
+    m_w.exitonclick()
