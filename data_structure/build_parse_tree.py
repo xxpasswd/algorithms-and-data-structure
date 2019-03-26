@@ -6,7 +6,7 @@
 遇见符号，将当前的节点设置为符号，右边插入节点，返回右边节点
 遇见括号，左边插入一个树，开始括号里面表达式的树建立
 """
-from node_tree import BinaryTree, m_w
+from node_tree import BinaryTree
 
 def bulid_parse_tree(alist):
     # 先构建一个空树
@@ -44,8 +44,17 @@ def evaluate(t):
     else:
         return t.root
 
+def printexp(t):
+    """
+    从树中恢复表达式
+    """
+    if t.root in ('+', '-', '*', '/'):
+        exp = '(' + printexp(t.left) + t.root + printexp(t.right) + ')'
+    else:
+        return t.root
+    return exp
+
 
 t = bulid_parse_tree(['(', '3', '+', '(', '4', '*', '5' ,')',')'])
-t.display()
-m_w.exitonclick()        
-print(evaluate(t))
+# t.display()
+print(printexp(t))    
