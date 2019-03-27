@@ -67,12 +67,37 @@ def preorder(t):
         preorder(t.get_left_child())
         preorder(t.get_right_child())
 
+def preorder2(t):
+    stack = []
+    cur_t = t
+    while stack or cur_t:
+        while cur_t:
+            print(cur_t.root)
+            stack.append(cur_t)
+            cur_t = cur_t.get_left_child()
+        
+        prev_t = stack.pop()
+        cur_t = prev_t.get_right_child() 
+
 
 def inorder(t):
     if t:
         inorder(t.get_left_child())
         print(t.root)
         inorder(t.get_right_child())
+
+
+def inorder2(t):
+    stack = []
+    cur_t = t
+    while stack or cur_t:
+        while cur_t:
+            stack.append(cur_t)
+            cur_t = cur_t.get_left_child()
+
+        prev_t = stack.pop()
+        print(prev_t.root)
+        cur_t = prev_t.get_right_child()
 
 
 def postorder(t):
@@ -82,12 +107,30 @@ def postorder(t):
         print(t.root)
 
 
+def hierarchical_traversal(t):
+    """
+    层序遍历
+    主要思路：将树节点一层一层放入队列中，然后取出一个节点的时候，将下一层节点放入队列中
+    """
+    queue = []
+    queue.append(t)
+    while queue:
+        cur_t = queue.pop(0)
+        print(cur_t.root)
+        if cur_t.get_left_child():
+            queue.append(cur_t.get_left_child())
+        if cur_t.get_right_child():
+            queue.append(cur_t.get_right_child())
+
+
+
 if __name__ == '__main__':
     t = BinaryTree('a')
     t.insert_left('b')
     t.insert_left('c')
     t.insert_right('d')
-    # preorder(t)  
-    inorder(t)     
-    # t.display()
-
+    inorder(t)
+    inorder2(t)
+    postorder(t)
+    # hierarchical_traversal(t)
+    t.display()
