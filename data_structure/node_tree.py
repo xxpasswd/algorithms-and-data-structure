@@ -33,33 +33,35 @@ class BinaryTree:
     def get_right_child(self):
         return self.right
 
-    def inner_display(self):
+
+def display(t):
+    """可视化这个树结构"""
+    global m
+    global m_w
+    m = turtle.Turtle()
+    m_w = turtle.Screen()
+    m.speed(0)
+
+    def inner_display(t):
         m.setheading(0)
         m.circle(20)
-        m.write(self.root)
+        m.write(t.root)
         p = m.pos()
 
-        if self.left != None:
+        if t.left != None:
             m.setheading(225)
             m.forward(100)
-            self.left.inner_display()
+            inner_display(t.left)
             m.setpos(p)
 
-        if self.right != None:
+        if t.right != None:
             m.setheading(315)
             m.forward(100)
-            self.right.inner_display()
+            inner_display(t.right)
             m.setpos(p)
 
-    def display(self):
-        """可视化这个树结构"""
-        global m
-        global m_w
-        m = turtle.Turtle()
-        m_w = turtle.Screen()
-        m.speed(0)
-        self.inner_display()
-        m_w.exitonclick()
+    inner_display(t)
+    m_w.exitonclick()
 
 def preorder(t):
     if t:
@@ -133,4 +135,4 @@ if __name__ == '__main__':
     inorder2(t)
     postorder(t)
     # hierarchical_traversal(t)
-    t.display()
+    display(t)
