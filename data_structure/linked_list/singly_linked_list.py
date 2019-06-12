@@ -243,6 +243,7 @@ class SinglyLinkedList:
             fast = fast.next.next
             slow = slow.next
 
+        # 空间复杂度要求为O(1)的话，可以将后半部分链表进行反转
         stack = []
         while slow:
             stack.append(slow.data)
@@ -277,9 +278,30 @@ class SinglyLinkedList:
             prev_d2 = d2
             d2 = d2.next
 
-        
+        # v1是头节点
+        if prev_d1 == None:
+            self.head = d2
+            prev_d2.next = d1
+            temp_d2_next = d2.next
+            d2.next = d1.next
+            d1.next = temp_d2_next
 
+        # v2是头节点
+        elif prev_d2 == None:
+            self.head = d1
+            prev_d1.next = d2
+            temp_d1_next = d1.next
+            d1.next = d2.next
+            d2.next = temp_d1_next
 
+        else:
+            prev_d1.next = d2
+            prev_d2.next = d1
+            # 注意，先连接d1,d2后，再记录d1,d2的下一个节点，不然d1,d2相邻的时候会出现bug，可以分析一下，这儿有点绕
+            temp_d1_next = d1.next
+            temp_d2_next = d2.next
+            d2.next = temp_d1_next
+            d1.next = temp_d2_next
 
     def print_list(self):
         temp = self.head
@@ -325,3 +347,11 @@ if __name__ == "__main__":
     l.print_list()
     b = l.is_palindrome()
     print(b)
+
+    # l.swap_node(2,5)
+    l.insert_to_head(3)
+    l.insert_to_head(4)
+    l.insert_to_head(8)
+    l.print_list()
+    l.swap_node(8,4)
+    l.print_list()
