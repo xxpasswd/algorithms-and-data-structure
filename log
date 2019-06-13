@@ -1,0 +1,108 @@
+Starting var:.. self = <__main__.CircularQueue object at 0x05085830>
+Starting var:.. item = 2
+Starting var:.. self.capacity = 2
+Starting var:.. self.head = 0
+Starting var:.. self.items = [None, None]
+Starting var:.. self.tail = 0
+10:36:08.580300 call        19     def enqueue(self, item):
+10:36:08.581302 line        21         if (self.tail + 1) % self.capacity == self.head:
+10:36:08.583301 line        24         self.items[self.tail] = item
+Modified var:.. self.items = [2, None]
+10:36:08.585305 line        25         self.tail = (self.tail + 1) % self.capacity
+Modified var:.. self.tail = 1
+10:36:08.588305 line        26         return True
+10:36:08.589306 return      26         return True
+Return value:.. True
+Starting var:.. self = <__main__.CircularQueue object at 0x05085830>
+Starting var:.. item = 3
+Starting var:.. self.capacity = 2
+Starting var:.. self.head = 0
+Starting var:.. self.items = [2, None]
+Starting var:.. self.tail = 1
+10:36:08.597311 call        19     def enqueue(self, item):
+10:36:08.598312 line        21         if (self.tail + 1) % self.capacity == self.head:
+10:36:08.600313 line        22             return False
+10:36:08.601314 return      22             return False
+Return value:.. False
+Starting var:.. self = <__main__.CircularQueue object at 0x05085830>
+Starting var:.. self.capacity = 2
+Starting var:.. self.head = 0
+Starting var:.. self.items = [2, None]
+Starting var:.. self.tail = 1
+10:36:08.611321 call        29     def dequeue(self):
+10:36:08.613322 line        30         if self.head == self.tail:
+10:36:08.614324 line        33         temp = self.items[self.head]
+New var:....... temp = 2
+10:36:08.616325 line        34         self.head = (self.head + 1) % self.capacity
+Modified var:.. self.head = 1
+10:36:08.619326 line        35         return temp
+10:36:08.620327 return      35         return temp
+Return value:.. 2
+Starting var:.. self = <__main__.CircularQueue object at 0x05085830>
+Starting var:.. self.capacity = 2
+Starting var:.. self.head = 1
+Starting var:.. self.items = [2, None]
+Starting var:.. self.tail = 1
+10:36:08.627334 call        29     def dequeue(self):
+10:36:08.628333 line        30         if self.head == self.tail:
+10:36:08.629334 line        31             return None
+10:36:08.630335 return      31             return None
+Return value:.. None
+Starting var:.. self = <__main__.CircularQueue object at 0x05085830>
+Starting var:.. item = 3
+Starting var:.. self.capacity = 2
+Starting var:.. self.head = 1
+Starting var:.. self.items = [2, None]
+Starting var:.. self.tail = 1
+10:36:08.638340 call        19     def enqueue(self, item):
+10:36:08.639340 line        21         if (self.tail + 1) % self.capacity == self.head:
+10:36:08.641342 line        24         self.items[self.tail] = item
+Modified var:.. self.items = [2, 3]
+10:36:08.643343 line        25         self.tail = (self.tail + 1) % self.capacity
+Modified var:.. self.tail = 0
+10:36:08.644349 line        26         return True
+10:36:08.646345 return      26         return True
+Return value:.. True
+Starting var:.. self = <__main__.CircularQueue object at 0x05085830>
+Starting var:.. self.capacity = 2
+Starting var:.. self.head = 1
+Starting var:.. self.items = [2, 3]
+Starting var:.. self.tail = 0
+10:36:08.654354 call        29     def dequeue(self):
+10:36:08.655352 line        30         if self.head == self.tail:
+10:36:08.657354 line        33         temp = self.items[self.head]
+New var:....... temp = 3
+10:36:08.659357 line        34         self.head = (self.head + 1) % self.capacity
+Modified var:.. self.head = 0
+10:36:08.662356 line        35         return temp
+10:36:08.663357 return      35         return temp
+Return value:.. 3
+Starting var:.. self = <__main__.CircularQueue object at 0x05085830>
+Starting var:.. item = 4
+Starting var:.. self.capacity = 2
+Starting var:.. self.head = 0
+Starting var:.. self.items = [2, 3]
+Starting var:.. self.tail = 0
+10:36:08.671365 call        19     def enqueue(self, item):
+10:36:08.672366 line        21         if (self.tail + 1) % self.capacity == self.head:
+10:36:08.674365 line        24         self.items[self.tail] = item
+Modified var:.. self.items = [4, 3]
+10:36:08.676383 line        25         self.tail = (self.tail + 1) % self.capacity
+Modified var:.. self.tail = 1
+10:36:08.678384 line        26         return True
+10:36:08.679383 return      26         return True
+Return value:.. True
+Starting var:.. self = <__main__.CircularQueue object at 0x05085830>
+Starting var:.. self.capacity = 2
+Starting var:.. self.head = 0
+Starting var:.. self.items = [4, 3]
+Starting var:.. self.tail = 1
+10:36:08.686374 call        29     def dequeue(self):
+10:36:08.687375 line        30         if self.head == self.tail:
+10:36:08.688375 line        33         temp = self.items[self.head]
+New var:....... temp = 4
+10:36:08.690376 line        34         self.head = (self.head + 1) % self.capacity
+Modified var:.. self.head = 1
+10:36:08.692378 line        35         return temp
+10:36:08.693379 return      35         return temp
+Return value:.. 4
