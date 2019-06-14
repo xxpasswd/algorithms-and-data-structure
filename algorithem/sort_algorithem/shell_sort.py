@@ -1,5 +1,7 @@
 """
 是在插入排序基础上的一种优化排序 O(n)--O(n^2)
+
+shell算法的思想：减少循环的次数
 """
 def insert_sort(alist):
     for i in range(1, len(alist)):
