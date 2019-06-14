@@ -41,6 +41,13 @@ class LinkedStack:
         
         return self.top.data
 
+    def __str__(self):
+        temp = self.top
+        res = ''
+        while temp:
+            res += temp.data
+            temp = temp.next
+        return res[::-1]
 
 if __name__ == "__main__":
     stack = LinkedStack()

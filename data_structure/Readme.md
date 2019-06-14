@@ -20,3 +20,4 @@
 #### [3. balanced_parenthese：检测括号是否成对](./stack/balanced_parenthese.py)
 #### [4. base_convert：进制转换](./stack/base_convert.py)
 #### [5. infix2prefix：中缀表达式转换为前缀表达式](./stack/infix2prefix.py)
+#### [6. infix2postfix：中缀表达式转换为后缀表示式](./stack/infix2postfix.py)
