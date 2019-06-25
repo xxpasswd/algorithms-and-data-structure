@@ -21,3 +21,8 @@
 #### [4. base_convert：进制转换](./stack/base_convert.py)
 #### [5. infix2prefix：中缀表达式转换为前缀表达式](./stack/infix2prefix.py)
 #### [6. infix2postfix：中缀表达式转换为后缀表示式](./stack/infix2postfix.py)
+
+
+### 哈希表
+
+#### [1. hash_table：哈希表](./hash_table/hash_table.py)
