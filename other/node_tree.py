@@ -135,4 +135,4 @@ if __name__ == '__main__':
     inorder2(t)
     postorder(t)
     # hierarchical_traversal(t)
-    display(t)
+    # display(t)

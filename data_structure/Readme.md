@@ -29,3 +29,4 @@
 ### 树
 
 #### [1. binary_search_tree：二分搜索树](./tree/binary_search_tree.py)
+#### [2. traversals：二叉树的遍历](./tree/traversals.py)
