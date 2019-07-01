@@ -56,6 +56,18 @@ def post_order(t):
         print(t.value)
 
 
+# def post_order2(t):
+#     stack = []
+#     queue = []
+#     while stack1 or t:
+#         while t:
+#             stack.append(t)
+#             t = t.left
+#         t = stack.pop()
+#         queue.append(t)
+#         t = t.right
+    
+
 def hierarchical_traversals(t):
     queue = []
     queue.append(t)
@@ -69,17 +81,18 @@ def hierarchical_traversals(t):
 
 if __name__ == "__main__":
     t = BinarySearchTree()
+    # {10,{5,{3,None,None},{8,None,None}},{15,{13,None,None},{17,None,None}}}
+    t.insert(10)
     t.insert(5)
-    t.insert(4)
-    t.insert(6)
-    t.insert(3)
-    t.insert(7)
-    t.insert(2)
     t.insert(8)
+    t.insert(3)
+    t.insert(15)
+    t.insert(13)
+    t.insert(17)
     print(t)
     # pre_order(t.root)
     # in_order(t.root)
-    # post_order(t.root)
+    post_order(t.root)
     # pre_order2(t.root)
-    in_order2(t.root)
+    # in_order2(t.root)
     # hierarchical_traversals(t.root)

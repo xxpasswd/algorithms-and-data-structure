@@ -35,3 +35,4 @@
 #### [27. compress:压缩字符](./compress.py)
 #### [28. change_coin:找零钱](./change_coin.py)
 以最少硬币找出零钱
+#### [29. eight_queen:八皇后问题](./eight_queen.py)
