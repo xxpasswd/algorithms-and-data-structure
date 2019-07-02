@@ -5,4 +5,5 @@
 #### [5. shell_sort.py: shell排序](./shell_sort.py)
 #### [6. merge_sort.py: 归并排序](./merge_sort.py)
 #### [7. quick_sort.py: 快速排序](./quick_sort.py)
+#### [8. heap_sort.py：堆排序](./heap_sort.py)
 #### [#. summary.py: 排序整理](./summary.py)

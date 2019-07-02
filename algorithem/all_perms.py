@@ -32,5 +32,24 @@ def all_perms(elements:str)->"单个元素时str，多个元素时list":
 
 
 
-words = 'abc'
-print(all_perms(words))
+# words = 'abc'
+# print(all_perms(words))
+
+"""
+回溯法求全排列，可以结合八皇后问题，加深对回溯思想的理解
+"""
+
+output = [None] * 3
+
+def permutations(element, pos):
+    if pos > 2:
+        print(output)
+    else:
+        for i in element:
+            output[pos] = i
+            e = element[:]
+            e.remove(i)
+            permutations(e, pos+1)
+
+
+permutations(['a','b','c'], 0)

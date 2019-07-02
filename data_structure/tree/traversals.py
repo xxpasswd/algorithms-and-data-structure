@@ -56,17 +56,24 @@ def post_order(t):
         print(t.value)
 
 
-# def post_order2(t):
-#     stack = []
-#     queue = []
-#     while stack1 or t:
-#         while t:
-#             stack.append(t)
-#             t = t.left
-#         t = stack.pop()
-#         queue.append(t)
-#         t = t.right
-    
+def post_order2(t):
+    stack = []
+    last_visit = None
+    while t:
+        stack.append(t)
+        t = t.left
+    while stack:
+        t = stack.pop()
+        if t.right and last_visit != t.right:
+            stack.append(t)
+            t = t.right
+            while t:
+                stack.append(t)
+                t = t.left
+        else:
+            print(t.value)
+            last_visit = t
+
 
 def hierarchical_traversals(t):
     queue = []
@@ -92,7 +99,8 @@ if __name__ == "__main__":
     print(t)
     # pre_order(t.root)
     # in_order(t.root)
-    post_order(t.root)
+    # post_order(t.root)
     # pre_order2(t.root)
     # in_order2(t.root)
+    post_order2(t.root)
     # hierarchical_traversals(t.root)
