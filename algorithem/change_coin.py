@@ -4,6 +4,8 @@
 
 解决思路：
 使用递归, 找出一个最基本的情况
+
+Date: 2019-07-15
 """
 
 
@@ -19,7 +21,7 @@ def min_coins(coins, change):
     return min_nums
 
 coins = [1,5,10,20]
-print(min_coins(coins, 64))
+# print(min_coins(coins, 64))
 
 """
 对递归的优化，使用缓存将已知的结果保存下来
@@ -53,14 +55,46 @@ print(min_coins2(coins,64, know_result))
 def min_coins3(change):
     know_result = [0]*(change+1)
     coins = [1,5,10,20]
+    path = []
     for i in range(change+1):
-        min_num = i # 初始化，最小的硬币数量是i个 
+        min_num = i # 初始化，最小的硬币数量是i个
+        cur = i
         for j in [c for c in coins if c<=i]:
             nums = know_result[i-j] + 1 # 遍历以前的结果，寻找最小的值
             if nums < min_num:
                 min_num = nums
+                cur = j
         know_result[i] = min_num
+        path.append(cur)
     
     print(know_result)
+    return path
 
-min_coins3(64)
+def print_path(path):
+    print(path)
+    res = []
+    end = len(path)-1
+    while end > 0:
+        res.append(path[end])
+        end = end - path[end]
+    print(res)
+
+# path = min_coins3(64)
+# print_path(path)
+
+
+"""
+贪心算法
+"""
+def min_coins4(change):
+    coins = [1,5,10,20]
+    result = []
+    while change > 0:
+        for coin in reversed(coins):
+            if change >= coin:
+                change -= coin
+                result.append(coin)
+                break
+    return result
+
+# print(min_coins4(64))

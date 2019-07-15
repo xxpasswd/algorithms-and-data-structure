@@ -50,8 +50,9 @@ def bm_match(pattern, string):
         pos = len(pattern) - 1
         while pos >= 0:
             if pattern[pos] != string[right-(len(pattern)-1-pos)]:
-                x = find_s(pattern, string[right-(len(pattern)-1-pos)])
-                right = right + pos - x
+                x = bad_str_rules(pattern, string[right-(len(pattern)-1-pos)], pos)
+                y = good_posfix_rules(pattern, string[right-(len(pattern)-1-pos)], pos)
+                right = right + max(x, y)
                 break
             pos -= 1
         else:
@@ -62,17 +63,47 @@ def bm_match(pattern, string):
     return found
 
 
-def find_s(pattern, s):
+def bad_str_rules(pattern, s, pos):
+    """坏字符规则，返回偏移量"""
     try:
-        index = pattern.index(s)
-        return index
+        index = pattern.rindex(s)
+        return  pos - index
     except:
-        return -1
+        return  pos + 1
 
+
+def good_posfix_rules(pattern, s, pos):
+    """好后缀规则，返回偏移量"""
+    try:
+        index = pattern[:pos+1].rindex(pattern[pos+1:])
+        return pos + 1 -index
+    except:
+        pos = pos
+        new_str = s + pattern[pos+1:]
+        while pos < len(pattern):
+            start = 0
+            cur = pos
+            while cur < len(pattern):
+                if pattern[start] != new_str[start]:
+                    break
+                else:
+                    start += 1
+                    cur += 1
+            else:
+                return pos
+            pos += 1
+        else:
+            return pos
+
+
+# 下面是优化后的bm_match_optimized
 
 
 if __name__ == "__main__":
     # print(bf_match('abc', 'a'))
     # print(rk_match('abc', 'aaadabcbc'))
-    print(bm_match('abc', 'aaadabcbc'))
+    print(bm_match('baaa', 'aaaaabaaaaaa'))
+    print(bf_match('baaa', 'aaaaabaaaaaa'))
+    print(rk_match('baaa', 'aaaaabaaaaaa'))
+
 

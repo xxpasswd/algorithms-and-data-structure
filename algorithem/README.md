@@ -37,3 +37,5 @@
 以最少硬币找出零钱
 #### [29. eight_queen:八皇后问题](./eight_queen.py)
 #### [30. string_match.py:字符串匹配](./string_match.py)
+#### [31. min_number:删除k个数后，是最小的数](./min_numger.py)
+#### [32. reverse_pair:求一个数组中的逆序对个数](./reverse_pair.py)
